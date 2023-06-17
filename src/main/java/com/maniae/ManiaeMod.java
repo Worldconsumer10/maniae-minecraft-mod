@@ -1,20 +1,17 @@
 package com.maniae;
 
-import com.maniae.items.ExampleItem;
-import com.maniae.items.ExampleItem2;
+
+import com.maniae.items.ModItems;
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.item.Item;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class ManiaeMod implements ModInitializer {
-    //Items
-    public static final Item exampleItem = new ExampleItem(new Item.Settings());
-    public static final Item exampleItem2 = new ExampleItem2(new Item.Settings());
-    //end of items
+    public static final String MOD_ID = "maniae";
+    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
     @Override
     public void onInitialize() {
-        Registry.register(Registry.ITEM, new Identifier("maniae", "exampleitem"),exampleItem);
-        Registry.register(Registry.ITEM, new Identifier("maniae", "exampleitem2"),exampleItem2);
+        LOGGER.info("["+MOD_ID+"] Mod Initalized");
+        ModItems.RegisterItems();
     }
 }
