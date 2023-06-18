@@ -3,7 +3,8 @@
 	"package": "com.maniae.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"PausedAI"
 	],
 	"injectors": {
 		"defaultRequire": 1

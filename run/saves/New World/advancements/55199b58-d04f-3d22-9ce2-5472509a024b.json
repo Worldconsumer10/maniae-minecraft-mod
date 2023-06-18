@@ -1,9 +1,0 @@
-{
-  "minecraft:adventure/adventuring_time": {
-    "criteria": {
-      "minecraft:bamboo_jungle": "2023-06-18 00:00:27 +1000"
-    },
-    "done": false
-  },
-  "DataVersion": 2975
-}

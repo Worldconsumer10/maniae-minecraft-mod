@@ -5,24 +5,141 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7404bc49-3c56-4480-970c-eced7a882657" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/maniae/functions/ClientFinder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/maniae/functions/List.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/maniae/handlers/ClientTick.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/maniae/status_effect/Status_Effects.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/maniae/status_effect/status_list/tazed.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/maniae/models/item/electroblade.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/maniae/textures/item/electroblade/arm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/maniae/textures/item/electroblade/black.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/maniae/textures/item/electroblade/bladetexture.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/maniae/textures/item/electroblade/mainpower.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/maniae/textures/item/electroblade/secondarypower.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/maniae/textures/item/electroblade/section.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/maniae/textures/item/electroblade/texture.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/maniae/textures/item/electroblade/texture2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/maniae/status_effect/ICustomStatusEffect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/maniae/ManiaeMod.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/maniae/ManiaeMod.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/maniae/functions/ClientFinder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/maniae/functions/ClientFinder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/maniae/functions/List.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/maniae/handlers/ClientTick.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/maniae/mixin/ExampleMixin.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/maniae/mixin/ExampleMixin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/maniae/status_effect/Status_Effects.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/maniae/status_effect/Status_Effects.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/maniae/status_effect/status_list/tazed.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/maniae/status_effect/status_list/tazed.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/maniae-refmap.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/maniae-refmap.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/fabric.mod.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/fabric.mod.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/maniae.mixins.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/maniae.mixins.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/config/fabric/indigo-renderer.properties" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/fabric/indigo-renderer.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2023-06-18-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2023-06-18-1.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2023-06-18-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2023-06-18-2.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2023-06-18-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2023-06-18-3.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2023-06-18-4.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2023-06-18-4.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2023-06-18-5.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2023-06-18-5.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2023-06-18-6.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2023-06-18-6.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2023-06-18-7.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2023-06-18-7.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-2.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-3.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-4.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-4.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-5.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-5.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/latest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/options.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/options.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/DIM-1/data/raids.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/DIM1/data/raids_end.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/advancements/24078ad8-d7e0-3e5c-a4a9-a3bc169a7177.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/advancements/3eec9f18-1d0e-3f17-917c-6994e7d034d1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/advancements/55199b58-d04f-3d22-9ce2-5472509a024b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/advancements/5606c356-f83a-3346-9cfd-7a4fa8e27776.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/advancements/69178f09-9f3d-374e-8ace-5645c6b599d6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/advancements/6f3f457a-8ce3-3a45-8767-61c2dfd0e70f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/advancements/7eabe93c-dd7d-38e8-9271-2dd9ed4d2fa5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/advancements/9c66b502-7304-3207-92e6-8d6afcf30d77.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/advancements/9e5d41e7-4785-3b2f-8261-593dade57f6e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/advancements/a0803941-42b2-30d8-878b-d5bba587b8ae.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/advancements/ae7b5efd-7fd1-3975-a19d-4e69aea8f757.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/advancements/b6529468-5313-3ea4-bc60-3e6ea6cabccd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/advancements/b89d12f3-1740-34c6-919e-a2949a3e81fe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/advancements/c03da6a3-8a6c-3375-a85a-97a8fae94902.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/advancements/d31b2f98-898c-3f1b-b785-db56ff276dc2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/advancements/e687d94c-f442-3ab7-a8a6-e1baf5dca36c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/advancements/eed40018-eacf-3358-87a4-2d80ad7eb0d1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/data/fabricRegistry.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/data/fabricRegistry.dat.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/data/fabricRegistry.dat.2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/data/raids.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/entities/r.-1.-1.mca" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/entities/r.-1.0.mca" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/entities/r.0.-1.mca" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/entities/r.0.0.mca" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/level.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/level.dat_old" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/24078ad8-d7e0-3e5c-a4a9-a3bc169a7177.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/24078ad8-d7e0-3e5c-a4a9-a3bc169a7177.dat_old" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/3eec9f18-1d0e-3f17-917c-6994e7d034d1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/3eec9f18-1d0e-3f17-917c-6994e7d034d1.dat_old" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/55199b58-d04f-3d22-9ce2-5472509a024b.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/55199b58-d04f-3d22-9ce2-5472509a024b.dat_old" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/5606c356-f83a-3346-9cfd-7a4fa8e27776.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/5606c356-f83a-3346-9cfd-7a4fa8e27776.dat_old" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/69178f09-9f3d-374e-8ace-5645c6b599d6.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/69178f09-9f3d-374e-8ace-5645c6b599d6.dat_old" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/6f3f457a-8ce3-3a45-8767-61c2dfd0e70f.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/7eabe93c-dd7d-38e8-9271-2dd9ed4d2fa5.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/7eabe93c-dd7d-38e8-9271-2dd9ed4d2fa5.dat_old" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/9c66b502-7304-3207-92e6-8d6afcf30d77.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/9c66b502-7304-3207-92e6-8d6afcf30d77.dat_old" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/9e5d41e7-4785-3b2f-8261-593dade57f6e.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/a0803941-42b2-30d8-878b-d5bba587b8ae.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/a0803941-42b2-30d8-878b-d5bba587b8ae.dat_old" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/ae7b5efd-7fd1-3975-a19d-4e69aea8f757.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/b6529468-5313-3ea4-bc60-3e6ea6cabccd.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/b6529468-5313-3ea4-bc60-3e6ea6cabccd.dat_old" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/b89d12f3-1740-34c6-919e-a2949a3e81fe.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/b89d12f3-1740-34c6-919e-a2949a3e81fe.dat_old" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/c03da6a3-8a6c-3375-a85a-97a8fae94902.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/c03da6a3-8a6c-3375-a85a-97a8fae94902.dat_old" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/d31b2f98-898c-3f1b-b785-db56ff276dc2.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/d31b2f98-898c-3f1b-b785-db56ff276dc2.dat_old" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/e687d94c-f442-3ab7-a8a6-e1baf5dca36c.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/e687d94c-f442-3ab7-a8a6-e1baf5dca36c.dat_old" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/eed40018-eacf-3358-87a4-2d80ad7eb0d1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/poi/r.-1.-1.mca" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/poi/r.-1.0.mca" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/poi/r.0.-1.mca" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/poi/r.0.0.mca" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-1.-1.mca" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-1.0.mca" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.0.-1.mca" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.0.0.mca" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/session.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/stats/24078ad8-d7e0-3e5c-a4a9-a3bc169a7177.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/stats/3eec9f18-1d0e-3f17-917c-6994e7d034d1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/stats/55199b58-d04f-3d22-9ce2-5472509a024b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/stats/5606c356-f83a-3346-9cfd-7a4fa8e27776.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/stats/69178f09-9f3d-374e-8ace-5645c6b599d6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/stats/6f3f457a-8ce3-3a45-8767-61c2dfd0e70f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/stats/7eabe93c-dd7d-38e8-9271-2dd9ed4d2fa5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/stats/9c66b502-7304-3207-92e6-8d6afcf30d77.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/stats/9e5d41e7-4785-3b2f-8261-593dade57f6e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/stats/a0803941-42b2-30d8-878b-d5bba587b8ae.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/stats/ae7b5efd-7fd1-3975-a19d-4e69aea8f757.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/stats/b6529468-5313-3ea4-bc60-3e6ea6cabccd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/stats/b89d12f3-1740-34c6-919e-a2949a3e81fe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/stats/c03da6a3-8a6c-3375-a85a-97a8fae94902.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/stats/d31b2f98-898c-3f1b-b785-db56ff276dc2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/stats/e687d94c-f442-3ab7-a8a6-e1baf5dca36c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/stats/eed40018-eacf-3358-87a4-2d80ad7eb0d1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/maniae/ManiaeMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maniae/ManiaeMod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/maniae/items/ModItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maniae/items/ModItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/maniae/items/item_list/ExampleItem2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maniae/items/item_list/Electroblade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/maniae/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/maniae/lang/en_us.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/maniae/functions/ClientFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maniae/functions/ClientFinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/maniae/functions/List.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/maniae/handlers/ClientTick.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/maniae/mixin/ExampleMixin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maniae/mixin/ExampleMixin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/maniae/status_effect/Status_Effects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maniae/status_effect/Status_Effects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/maniae/status_effect/status_list/tazed.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/maniae.mixins.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/maniae.mixins.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,24 +162,7 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Maniae" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Maniae" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Maniae" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Maniae" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="fabric" type="c8890929:TasksNode$1" />
+                <item name="maniae" type="f1a62948:ProjectNode" />
               </path>
             </expand>
             <select />
@@ -74,6 +174,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -84,6 +185,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
   <component name="ProjectId" id="2RHxghhFx5qfQK71GMz3TY6j9Wo" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -91,14 +195,15 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/MinecraftModding/Maniae/build.gradle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "D:/MinecraftModding/maniae/.gradle/loom-cache/minecraftMaven/net/minecraft/minecraft-merged-project-root/1.18.2-net.fabricmc.yarn.1_18_2.1.18.2+build.4-v2/minecraft-merged-project-root-1.18.2-net.fabricmc.yarn.1_18_2.1.18.2+build.4-v2-sources.jar"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.maniae.functions" />
@@ -131,6 +236,7 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration name="Maniae [buildDependents]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -152,6 +258,7 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration name="Maniae [buildNeeded]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -173,6 +280,7 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration name="Maniae [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -194,6 +302,7 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration name="Maniae [runClient]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -215,6 +324,7 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -260,6 +370,11 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/.gradle/loom-cache/minecraftMaven/net/minecraft/minecraft-merged-project-root/1.18.2-net.fabricmc.yarn.1_18_2.1.18.2+build.4-v2/minecraft-merged-project-root-1.18.2-net.fabricmc.yarn.1_18_2.1.18.2+build.4-v2-sources.jar!/net/minecraft/entity/mob/MobEntity.java</url>
+          <line>235</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
