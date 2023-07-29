@@ -4,10 +4,16 @@ package com.maniae;
 import com.maniae.entity.custom.BlockitEntity;
 import com.maniae.functions.ClientFinder;
 import com.maniae.items.ModItems;
+import com.maniae.mobs.selino.Selinofos;
 import com.maniae.status_effect.Status_Effects;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
+import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.SpawnGroup;
+import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
@@ -17,17 +23,17 @@ import org.slf4j.LoggerFactory;
 public class ManiaeMod implements ModInitializer {
     public static final String MOD_ID = "maniae";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-<<<<<<< Updated upstream
-=======
-    public static final ClientTick clientTick = new ClientTick();
-
->>>>>>> Stashed changes
+    public static final EntityType<Selinofos> SELINO = Registry.register(
+            Registry.ENTITY_TYPE,
+            new Identifier(MOD_ID, "selino"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, Selinofos::new).dimensions(EntityDimensions.fixed(10f, 10f)).build()
+    );
     @Override
     public void onInitialize() {
         LOGGER.info("["+MOD_ID+"] Mod Initalized");
         ModItems.RegisterItems();
         Status_Effects.RegisterStatusEffects();
         ClientFinder.initialize();
-
+        FabricDefaultAttributeRegistry.register(SELINO, Selinofos.createMobAttributes());
     }
 }

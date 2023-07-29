@@ -2,28 +2,12 @@
   "mappings": {
     "com/maniae/mixin/ExampleMixin": {
       "loadWorld": "Lnet/minecraft/server/MinecraftServer;method_3735()V"
-    },
-    "com/maniae/mixin/PausedAI": {
-      "canTarget": "Lnet/minecraft/class_1308;method_5973(Lnet/minecraft/class_1299;)Z",
-      "isInWalkTargetRange()Z": "Lnet/minecraft/class_1308;method_18411()Z",
-      "isInWalkTargetRange(Lnet/minecraft/util/math/BlockPos;)Z": "Lnet/minecraft/class_1308;method_18407(Lnet/minecraft/class_2338;)Z",
-      "lookAtEntity": "Lnet/minecraft/class_1308;method_5951(Lnet/minecraft/class_1297;FF)V",
-      "setPositionTarget": "Lnet/minecraft/class_1308;method_18408(Lnet/minecraft/class_2338;I)V",
-      "tick": "Lnet/minecraft/class_1308;method_5773()V"
     }
   },
   "data": {
     "named:intermediary": {
       "com/maniae/mixin/ExampleMixin": {
         "loadWorld": "Lnet/minecraft/server/MinecraftServer;method_3735()V"
-      },
-      "com/maniae/mixin/PausedAI": {
-        "canTarget": "Lnet/minecraft/class_1308;method_5973(Lnet/minecraft/class_1299;)Z",
-        "isInWalkTargetRange()Z": "Lnet/minecraft/class_1308;method_18411()Z",
-        "isInWalkTargetRange(Lnet/minecraft/util/math/BlockPos;)Z": "Lnet/minecraft/class_1308;method_18407(Lnet/minecraft/class_2338;)Z",
-        "lookAtEntity": "Lnet/minecraft/class_1308;method_5951(Lnet/minecraft/class_1297;FF)V",
-        "setPositionTarget": "Lnet/minecraft/class_1308;method_18408(Lnet/minecraft/class_2338;I)V",
-        "tick": "Lnet/minecraft/class_1308;method_5773()V"
       }
     }
   }
