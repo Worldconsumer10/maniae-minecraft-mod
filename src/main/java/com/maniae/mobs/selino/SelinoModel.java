@@ -5,7 +5,7 @@ import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.client.util.math.MatrixStack;
 
-public class SelinoModel extends EntityModel<Selinofos> {
+public class SelinoModel extends EntityModel<SelinofosEntity> {
 	private final ModelPart body;
 	private final ModelPart tail;
 	private final ModelPart neck;
@@ -69,7 +69,7 @@ public class SelinoModel extends EntityModel<Selinofos> {
 		return TexturedModelData.of(modelData, 1024, 1024);
 	}
 	@Override
-	public void setAngles(Selinofos entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+	public void setAngles(SelinofosEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 	}
 	@Override
 	public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
