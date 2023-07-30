@@ -7,6 +7,7 @@ import net.minecraft.entity.EntityPose;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.Packet;
+import net.minecraft.util.math.Box;
 
 public class SelinofosPart extends Entity {
     public SelinofosEntity owner;
@@ -35,7 +36,6 @@ public class SelinofosPart extends Entity {
     protected void initDataTracker() {
 
     }
-
     @Override
     protected void readCustomDataFromNbt(NbtCompound nbt) {
 

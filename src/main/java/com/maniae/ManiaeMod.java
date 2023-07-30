@@ -4,6 +4,7 @@ package com.maniae;
 import com.maniae.functions.ClientFinder;
 import com.maniae.items.ModItems;
 import com.maniae.mobs.selino.SelinofosEntity;
+import com.maniae.mobs.selino.parts.SelinofosPart;
 import com.maniae.status_effect.Status_Effects;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
@@ -22,7 +23,7 @@ public class ManiaeMod implements ModInitializer {
     public static final EntityType<SelinofosEntity> SELINO = Registry.register(
             Registry.ENTITY_TYPE,
             new Identifier(MOD_ID, "selino"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, SelinofosEntity::new).dimensions(EntityDimensions.fixed(10f, 10f)).build()
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, SelinofosEntity::new).dimensions(EntityDimensions.fixed(6f, 9f)).build()
     );
     @Override
     public void onInitialize() {

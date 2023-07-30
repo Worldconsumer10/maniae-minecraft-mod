@@ -15,10 +15,10 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class SelinofosEntity extends PathAwareEntity {
-    SelinofosPart leftLeg = new SelinofosPart(this,"leftLeg",1,1);
-    SelinofosPart rightLeg = new SelinofosPart(this,"leftLeg",1,1);
-    SelinofosPart tail = new SelinofosPart(this,"leftLeg",1,1);
-    SelinofosPart neck = new SelinofosPart(this,"leftLeg",1,1);
+    SelinofosPart leftLeg = new SelinofosPart(this,"leftLeg",10,10);
+    SelinofosPart rightLeg = new SelinofosPart(this,"rightLeg",10,10);
+    SelinofosPart tail = new SelinofosPart(this,"tail",10,10);
+    SelinofosPart neck = new SelinofosPart(this,"neck",10,10);
     SelinofosPart head = new SelinofosPart(neck,"head",1,1);
     private final SelinofosPart[] parts;
     public SelinofosEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
