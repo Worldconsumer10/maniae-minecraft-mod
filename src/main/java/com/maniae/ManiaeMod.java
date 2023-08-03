@@ -2,6 +2,7 @@ package com.maniae;
 
 
 import com.maniae.functions.ClientFinder;
+import com.maniae.functions.EntityDeathEventListener;
 import com.maniae.items.ModItems;
 import com.maniae.mobs.selino.SelinofosEntity;
 import com.maniae.mobs.selino.parts.SelinofosPart;
@@ -23,11 +24,12 @@ public class ManiaeMod implements ModInitializer {
     public static final EntityType<SelinofosEntity> SELINO = Registry.register(
             Registry.ENTITY_TYPE,
             new Identifier(MOD_ID, "selino"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, SelinofosEntity::new).dimensions(EntityDimensions.fixed(6f, 9f)).build()
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, SelinofosEntity::new).dimensions(EntityDimensions.fixed(4f, 8.5f)).build()
     );
     @Override
     public void onInitialize() {
         LOGGER.info("["+MOD_ID+"] Mod Initalized");
+        EntityDeathEventListener.register();
         ModItems.RegisterItems();
         Status_Effects.RegisterStatusEffects();
         ClientFinder.initialize();

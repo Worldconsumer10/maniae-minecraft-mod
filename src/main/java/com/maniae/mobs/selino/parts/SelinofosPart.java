@@ -57,6 +57,7 @@ public class SelinofosPart extends Entity {
         else
             return false;
     }
+
     public boolean damage(DamageSource source, float amount) {
         if (this.owner != null)
             return !this.isInvulnerableTo(source) && this.owner.damagePart(this, source, amount);
