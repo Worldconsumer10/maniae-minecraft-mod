@@ -6,7 +6,10 @@ import net.fabricmc.fabric.api.util.NbtType;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.ai.TargetPredicate;
 import net.minecraft.entity.ai.goal.Goal;
+import net.minecraft.entity.ai.goal.LookAroundGoal;
 import net.minecraft.entity.ai.goal.LookAtEntityGoal;
 import net.minecraft.entity.ai.goal.WanderAroundGoal;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -186,11 +189,13 @@ public class Blockit extends PathAwareEntity {
     }
 
     private void InitGoals(){
-        this.goalSelector.add(0, new FollowCustomer(this));
-        this.goalSelector.add(2, new FindBlockitOccupation(this));
+        this.goalSelector.add(1,new GroupChat(this));
+        this.goalSelector.add(2, new FollowCustomer(this));
+        this.goalSelector.add(1, new FindBlockitOccupation(this));
         this.goalSelector.add(3, new WanderAroundGoal(this,1));
-        this.goalSelector.add(1,new LookAtEntityGoal(this,PlayerEntity.class,15));
-        this.goalSelector.add(1,new LookAtEntityGoal(this,Blockit.class,15));
+        this.goalSelector.add(5,new LookAroundGoal(this));
+        this.goalSelector.add(4,new LookAtEntityGoal(this,PlayerEntity.class,30));
+        this.goalSelector.add(4,new LookAtEntityGoal(this,Blockit.class,30));
     }
 
     @Override
@@ -213,7 +218,7 @@ public class Blockit extends PathAwareEntity {
             this.occupation = BlockitOccupations.valueOf(nbt.getString("occupation"));
 
         if (nbt.contains("offers")) {
-            var nbtList = nbt.getList("offers", NbtType.COMPOUND);
+            this.tradeOffers = new TradeOfferList(nbt.getCompound("offers"));
         }
     }
 
@@ -367,6 +372,40 @@ public class Blockit extends PathAwareEntity {
         @Override
         public void stop(){
             mob.navigation.stop();
+        }
+    }
+    static class GroupChat extends Goal{
+        final Blockit mob;
+        LivingEntity target;
+        public GroupChat(Blockit mob){
+            this.mob=mob;
+            this.target=FindNearestBlockit();
+        }
+
+        private LivingEntity FindNearestBlockit(){
+            return mob.world.getClosestEntity(Blockit.class, TargetPredicate.DEFAULT,mob,mob.getX(),mob.getY(),mob.getZ(),mob.getBoundingBox().expand(20));
+        }
+
+        @Override
+        public boolean canStart() {
+            this.target=FindNearestBlockit();
+            return mob.goalSelector.getRunningGoals().findAny().isEmpty() && this.target!=null;
+        }
+
+        @Override
+        public boolean shouldContinue() {
+            return canStart() && !this.target.getBoundingBox().expand(1).intersects(mob.getBoundingBox());
+        }
+
+        @Override
+        public void start() {
+            this.mob.navigation.startMovingTo(this.target,1);
+            this.mob.lookControl.lookAt(this.target);
+        }
+
+        @Override
+        public void stop() {
+            this.mob.navigation.stop();
         }
     }
 }

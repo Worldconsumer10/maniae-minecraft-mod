@@ -26,7 +26,7 @@ public class ManiaeMod implements ModInitializer {
     public static final EntityType<Blockit> BLOCKIT_ENTITY = Registry.register(
             Registry.ENTITY_TYPE,
             new Identifier(MOD_ID,"blockit"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE,Blockit::new).dimensions(EntityDimensions.fixed(0.5f,0.6f)).build()
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE,Blockit::new).dimensions(EntityDimensions.fixed(0.25f,0.3f)).build()
     );
     public static final EntityType<TraderEnderman> ENDER_TRADER = Registry.register(
             Registry.ENTITY_TYPE,
