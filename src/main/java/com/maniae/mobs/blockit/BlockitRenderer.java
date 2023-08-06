@@ -15,6 +15,9 @@ public class BlockitRenderer extends MobEntityRenderer<Blockit,BlockItModel> {
 
     @Override
     public Identifier getTexture(Blockit entity) {
-        return new Identifier(ManiaeMod.MOD_ID,"textures/entity/blockit.png");
+        if (entity.occupation == BlockitOccupations.DEMOLITIONIST)
+            return new Identifier(ManiaeMod.MOD_ID,"textures/entity/blockit/blockit_demolitionist.png");
+        else
+            return new Identifier(ManiaeMod.MOD_ID,"textures/entity/blockit/blockit_normal.png");
     }
 }

@@ -558,7 +558,7 @@ public class TraderEnderman extends EndermanEntity {
             }
             return tradeOfferList;
         }
-        private static TradeOffer createTradeOffer(Item buyItem, Item sellItem, int maxUses, int merchantExperience, int priceMultiplier, int buyAmount, int sellAmount){
+        public static TradeOffer createTradeOffer(Item buyItem, Item sellItem, int maxUses, int merchantExperience, int priceMultiplier, int buyAmount, int sellAmount){
             ItemStack buyItemStack = new ItemStack(buyItem);
             buyItemStack.setCount(buyAmount);
             ItemStack sellItemStack = new ItemStack(sellItem);
