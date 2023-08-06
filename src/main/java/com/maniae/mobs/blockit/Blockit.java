@@ -7,14 +7,18 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.ai.FuzzyPositions;
 import net.minecraft.entity.ai.TargetPredicate;
 import net.minecraft.entity.ai.goal.Goal;
 import net.minecraft.entity.ai.goal.LookAroundGoal;
 import net.minecraft.entity.ai.goal.LookAtEntityGoal;
 import net.minecraft.entity.ai.goal.WanderAroundGoal;
+import net.minecraft.entity.ai.pathing.MobNavigation;
+import net.minecraft.entity.ai.pathing.Path;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -31,10 +35,12 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.math.Vec3i;
 import net.minecraft.village.Merchant;
 import net.minecraft.village.TradeOffer;
 import net.minecraft.village.TradeOfferList;
 import net.minecraft.village.TradeOffers;
+import net.minecraft.world.LightType;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -130,7 +136,17 @@ public class Blockit extends PathAwareEntity {
                 return blockit.world.isClient;
             }
         };
-        InitGoals();
+        DefaultGoals();
+    }
+    boolean fleeingFromSun = false;
+
+    @Override
+    public void tickMovement() {
+        super.tickMovement();
+        if (world.getLightLevel(LightType.SKY,this.getBlockPos()) > 5 && !fleeingFromSun)
+            BrightSunGoal();
+        else if (world.getLightLevel(LightType.SKY,this.getBlockPos()) <= 5 && fleeingFromSun)
+            DefaultGoals();
     }
 
     public static DefaultAttributeContainer.Builder createMobAttributes(){
@@ -187,8 +203,21 @@ public class Blockit extends PathAwareEntity {
             return super.interactMob(player, hand);
         }
     }
+    private void BrightSunGoal(){
+        this.goalSelector.clear();
+        this.goalSelector.add(1,new GoalMoveToLowLightBlocks(this));
+        fleeingFromSun=true;
+    }
 
-    private void InitGoals(){
+    public boolean isScaredOfLightPos(BlockPos blockPos){
+        return world.getLightLevel(LightType.SKY,blockPos) > 5 || world.getLightLevel(LightType.BLOCK,blockPos) > 7;
+    }
+    public int lightValueOfPos(BlockPos blockPos){
+        return world.getLightLevel(LightType.SKY,blockPos) + world.getLightLevel(LightType.BLOCK,blockPos);
+    }
+
+    private void DefaultGoals(){
+        this.goalSelector.clear();
         this.goalSelector.add(1,new GroupChat(this));
         this.goalSelector.add(2, new FollowCustomer(this));
         this.goalSelector.add(1, new FindBlockitOccupation(this));
@@ -196,6 +225,7 @@ public class Blockit extends PathAwareEntity {
         this.goalSelector.add(5,new LookAroundGoal(this));
         this.goalSelector.add(4,new LookAtEntityGoal(this,PlayerEntity.class,30));
         this.goalSelector.add(4,new LookAtEntityGoal(this,Blockit.class,30));
+        fleeingFromSun=false;
     }
 
     @Override
@@ -406,6 +436,69 @@ public class Blockit extends PathAwareEntity {
         @Override
         public void stop() {
             this.mob.navigation.stop();
+        }
+    }
+    public class GoalMoveToLowLightBlocks extends Goal {
+        private final Blockit entity;
+        private BlockPos targetBlockPos;
+        private Path path;
+        private int cooldown = 20;
+
+        public GoalMoveToLowLightBlocks(Blockit entity) {
+            this.entity = entity;
+        }
+
+        @Override
+        public boolean canStart() {
+            BlockPos entityPos = entity.getBlockPos();
+            return entity.isScaredOfLightPos(entityPos); //Will always remain true as long as this pos is too bright.
+        }
+
+        @Override
+        public boolean shouldRunEveryTick() {
+            return true;
+        }
+
+        @Override
+        public void tick() {
+            if (targetBlockPos==null) return;
+            if (this.path != null && this.path.isFinished() && this.entity.getNavigation().isIdle() && cooldown <= 0)
+            {
+                start(); //Recall start again.
+                cooldown+=20; //Required so we don't accidentally cause an infinite loop.
+            }
+            cooldown--;
+        }
+
+        private void ReaquirePath(){
+            this.path = this.entity.getNavigation().findPathTo(targetBlockPos,0);
+            this.entity.getNavigation().startMovingAlong(this.path,1);
+        }
+
+        private BlockPos FindTargetBlock(){
+            int lightLevel = entity.lightValueOfPos(entity.getBlockPos());
+            int searchRadius = 5;
+            while (searchRadius <= 50){
+                for (int x = -searchRadius; x < searchRadius; x++) {
+                    for (int y = -searchRadius; y < searchRadius; y++) {
+                        for (int z = -searchRadius; z < searchRadius; z++) {
+                            BlockPos testPosition = entity.getBlockPos().add(new Vec3i(x,y,z));
+                            if (entity.lightValueOfPos(testPosition) < lightLevel)
+                            {
+                                return testPosition;
+                            }
+                        }
+                    }
+                }
+                searchRadius++;
+            }
+            return FuzzyPositions.localFuzz(entity.getRandom(),50,50);
+        }
+
+        @Override
+        public void start() {
+            this.targetBlockPos=FindTargetBlock();
+            ReaquirePath();
         }
     }
 }

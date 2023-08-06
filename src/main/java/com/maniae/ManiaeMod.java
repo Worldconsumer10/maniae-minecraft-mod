@@ -5,6 +5,7 @@ import com.maniae.functions.ClientFinder;
 import com.maniae.functions.EntityDeathEventListener;
 import com.maniae.items.ModItems;
 import com.maniae.mobs.blockit.Blockit;
+import com.maniae.mobs.gargoyle.Gargoyle;
 import com.maniae.mobs.traderenderman.TraderEnderman;
 import com.maniae.status_effect.Status_Effects;
 import net.fabricmc.api.ModInitializer;
@@ -33,6 +34,11 @@ public class ManiaeMod implements ModInitializer {
             new Identifier(MOD_ID, "ender_trader"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, TraderEnderman::new).dimensions(EntityDimensions.fixed(0.5f, 4f)).build()
     );
+    public static final EntityType<Gargoyle> GARGOYLE = Registry.register(
+            Registry.ENTITY_TYPE,
+            new Identifier(MOD_ID, "gargoyle"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, Gargoyle::new).dimensions(EntityDimensions.fixed(1f, 1f)).build()
+    );
     @Override
     public void onInitialize() {
         LOGGER.info("["+MOD_ID+"] Mod Initalized");
@@ -42,5 +48,6 @@ public class ManiaeMod implements ModInitializer {
         ClientFinder.initialize();
         FabricDefaultAttributeRegistry.register(BLOCKIT_ENTITY, Blockit.createMobAttributes());
         FabricDefaultAttributeRegistry.register(ENDER_TRADER, EndermanEntity.createEndermanAttributes());
+        FabricDefaultAttributeRegistry.register(GARGOYLE, Gargoyle.createMobAttributes());
     }
 }
