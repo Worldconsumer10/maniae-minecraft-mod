@@ -105,23 +105,12 @@ public class Gargoyle extends PathAwareEntity implements IAnimatable, IAnimation
 
     @Override
     public void registerControllers(AnimationData animationData) {
-        animationData.addAnimationController(new AnimationController(this,"asleepController",0,this::asleepPredicate));
+        animationData.addAnimationController(new AnimationController<Gargoyle>(this,"controller",0,this::predicate));
     }
 
-    String lastAnimation = "none";
-
-    private PlayState asleepPredicate(AnimationEvent animationEvent) {
-        if (state==1 && !lastAnimation.equals("gargoyle.animation.awake"))
-        {
-            animationEvent.getController().setAnimation(new AnimationBuilder().addAnimation("gargoyle.animation.awake",ILoopType.EDefaultLoopTypes.HOLD_ON_LAST_FRAME));
-            lastAnimation="gargoyle.animation.awake";
-        }
-        else if (state==0 && !lastAnimation.equals("gargoyle.animation.idle"))
-        {
-            animationEvent.getController().setAnimation(new AnimationBuilder().addAnimation("gargoyle.animation.idle",ILoopType.EDefaultLoopTypes.HOLD_ON_LAST_FRAME));
-            lastAnimation="gargoyle.animation.idle";
-        }
-        return state == 2 || state==3 ? PlayState.STOP : PlayState.CONTINUE;
+    private PlayState predicate(AnimationEvent<Gargoyle> gargoyleAnimationEvent) {
+        gargoyleAnimationEvent.getController().setAnimation(new AnimationBuilder().addAnimation("animation.gargoyle.awaken",ILoopType.EDefaultLoopTypes.HOLD_ON_LAST_FRAME));
+        return PlayState.CONTINUE;
     }
 
     @Override
